@@ -12,7 +12,7 @@ public class Login {
 	public static void Logintest(WebDriver driver) throws InterruptedException {
 
 		driver.findElement(Loginpage_Locator.Name).sendKeys("nikitabargal");
-
+		Thread.sleep(1000);
 		driver.findElement(Loginpage_Locator.Passwod).sendKeys("Qwerty@123");
 		Thread.sleep(1000);
 
@@ -23,7 +23,6 @@ public class Login {
 		String t = tmep[3];
 		int k = Integer.parseInt(t);
 	
-
 		if (k == 1) {
 
 			actions.sendKeys(Keys.ARROW_LEFT);
@@ -35,6 +34,7 @@ public class Login {
 		}
 
 		actions.build().perform();
+		Thread.sleep(1000);
 
 		driver.findElement(Loginpage_Locator.Button).click();
 		

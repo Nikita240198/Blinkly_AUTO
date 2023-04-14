@@ -12,15 +12,18 @@ public class main {
 
 		driver.get("https://staging.blinkly.com/");
 		
+		Thread.sleep(1000);
+		
 		Landing.landingtest(driver);
+		
 		
         Login.Logintest(driver);
     
-        
+    	
        Inbox.Inboxtest(driver);
     
         
-		driver.close();
+	driver.close();
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 			driver.close();

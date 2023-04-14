@@ -1,10 +1,11 @@
 package locators;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 
-import locators.allLocators.InboxPage_Locators;
 
 public class Inbox {
 	public static void Inboxtest(WebDriver driver) throws InterruptedException{
@@ -24,9 +25,21 @@ public class Inbox {
 //	driver.findElement(By.cssSelector("div[id='list_view']")).click();
 	
 	
-driver.findElement(By.xpath("//input[@class='filled-in toggle-all']")).click();
-Thread.sleep(3000);
-	
+WebElement element = driver.findElement(By.cssSelector("[aria-label='Select all']"));
+Actions action = new Actions(driver);
+action.moveToElement(element).click().perform();
+
+
+Thread.sleep(2000);
+
+
+ WebElement element1 = driver.findElement(By.cssSelector("div[data-target='deleteModal']"));
+
+Actions action1 = new Actions(driver);
+action1.moveToElement(element1).click().perform();
+
+
+
 
 
 	}
