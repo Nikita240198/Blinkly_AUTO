@@ -33,11 +33,10 @@ action.moveToElement(element).click().perform();
 Thread.sleep(2000);
 
 
- WebElement element1 = driver.findElement(By.cssSelector("div[data-target='deleteModal']"));
-
+ WebElement element1 = driver.findElement(By.cssSelector("[data-target='deleteModal']"));
 Actions action1 = new Actions(driver);
 action1.moveToElement(element1).click().perform();
-
+Thread.sleep(2000);
 
 
 
