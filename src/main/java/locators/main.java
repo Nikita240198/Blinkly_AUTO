@@ -18,9 +18,13 @@ public class main {
 		
 		
         Login.Logintest(driver);
+        for(int i=0;i<5;i++) Compose.SendingEmail(driver,i+1);
     
     	
-       Inbox.Inboxtest(driver);
+       //Inbox.Inboxtest(driver);
+       
+       
+       
     
         
 	driver.close();
